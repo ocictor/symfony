@@ -1,0 +1,139 @@
+{# templates/blog/portfolio.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon E-Portfolio{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="mb-4">E-Portfolio de Compétences</h1>
+
+            {# RT1 - Administration et sécurité des réseaux #}
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>RT1 - Administration et sécurité des réseaux</h2>
+                </div>
+                <div class="card-body">
+                    <div class="competence-item mb-4">
+                        <h4>Configuration des réseaux</h4>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" 
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h5>Preuve d'acquisition</h5>
+                                <p>Configuration réussie des VLANs et du routage statique lors des TPs</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Analyse réflexive</h5>
+                                <p>Cette compétence m'a permis de comprendre l'importance de la segmentation réseau 
+                                   et de la sécurisation des communications.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="competence-item mb-4">
+                        <h4>Sécurité des systèmes</h4>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%" 
+                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h5>Preuve d'acquisition</h5>
+                                <p>Mise en place d'un pare-feu et configuration des règles de sécurité</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Analyse réflexive</h5>
+                                <p>J'ai appris à anticiper les menaces et à mettre en place des solutions 
+                                   préventives plutôt que réactives.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {# R109 - Compétences Web #}
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>R109 - Développement Web</h2>
+                </div>
+                <div class="card-body">
+                    <div class="competence-item mb-4">
+                        <h4>Framework Symfony</h4>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 70%" 
+                                 aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h5>Preuve d'acquisition</h5>
+                                <p>Création de ce portfolio avec Symfony, utilisation des contrôleurs et des templates Twig</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Analyse réflexive</h5>
+                                <p>La maîtrise d'un framework comme Symfony est essentielle pour développer 
+                                   des applications web professionnelles et sécurisées.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="competence-item mb-4">
+                        <h4>HTML/CSS/Bootstrap</h4>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 85%" 
+                                 aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h5>Preuve d'acquisition</h5>
+                                <p>Utilisation de Bootstrap et création de designs responsifs pour différents projets web</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Analyse réflexive</h5>
+                                <p>Ces compétences me permettent de créer des interfaces utilisateur modernes et adaptatives</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {# SAE - Projets #}
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>SAE - Projets</h2>
+                </div>
+                <div class="card-body">
+                    <div class="competence-item mb-4">
+                        <h4>SAE1.04 - Se présenter sur internet</h4>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%" 
+                                 aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h5>Description du projet</h5>
+                                <p>Création d'un portfolio professionnel en utilisant Symfony et Bootstrap</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Compétences développées</h5>
+                                <ul>
+                                    <li>Utilisation du framework Symfony</li>
+                                    <li>Design responsive avec Bootstrap</li>
+                                    <li>Gestion de version avec Git</li>
+                                    <li>Rédaction professionnelle</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Analyse réflexive</h5>
+                                <p>Ce projet m'a permis de mettre en pratique mes compétences en développement web
+                                   tout en créant un outil professionnel pour ma future carrière.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

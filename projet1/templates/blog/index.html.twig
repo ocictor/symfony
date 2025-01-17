@@ -1,20 +1,30 @@
+{# templates/blog/index.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BlogController!{% endblock %}
+{% block title %}Mon E-Portfolio{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Salut {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/victor/github/symphony/projet1/src/Controller/BlogController.php</code></li>
-        <li>Your template at <code>C:/victor/github/symphony/projet1/templates/blog/index.html.twig</code></li>
-    </ul>
-</div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card bg-dark text-light">
+                <div class="card-body">
+                    <h1 class="display-4">{{ name }}</h1>
+                    <p class="lead">Groupe : {{ group }}</p>
+                    <hr class="my-4">
+                    <p>{{ introduction }}</p>
+                </div>
+            </div>
+            
+            {# Container "Pour en savoir plus" #}
+            <div class="card mt-4 bg-primary text-light">
+                <div class="card-header">
+                    <h3>Pour en savoir plus sur moi</h3>
+                </div>
+                <div class="card-body">
+                    <p>Je suis étudiant en Réseaux et Télécommunications, passionné par la technologie et constamment à la recherche d'améliorer mes compétences.</p>
+                    <a href="{{ path('app_apropos') }}" class="btn btn-light">Découvrir mes centres d'intérêt</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

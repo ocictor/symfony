@@ -1,0 +1,245 @@
+{# templates/blog/cv.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon CV{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --secondary-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: none;
+        }
+
+        .contact-info {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-info h4 {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .contact-info i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-weight: bold;
+            position: relative;
+        }
+
+        h2.border-bottom {
+            border-bottom: 3px solid var(--accent-color) !important;
+        }
+
+        .col-md-4 strong {
+            color: white;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        ul li:before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .img-fluid.rounded-circle {
+            border: 4px solid var(--accent-color);
+            padding: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .img-fluid.rounded-circle:hover {
+            transform: scale(1.05);
+        }
+
+        .row.mt-3 {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .row.mt-3:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        .competences h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .langues li {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            list-style: none;
+        }
+
+        .profile-section p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row mb-4">
+                        {# Section photo et coordonnées #}
+                        <div class="col-md-4 text-center">
+                            <div class="mb-3">
+                                <img src="{{ app.request.baseUrl }}/images/victor.JPEG" alt="Ma photo" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
+                            </div>
+                            <div class="contact-info">
+                                <h4>CELARIER Victor</h4>
+                                <p>Étudiant en BUT Réseaux et Télécommunications</p>
+                                <hr style="border-color: var(--accent-color);">
+                                <p><i class="fas fa-envelope"></i> victor.celarier@example.com</p>
+                                <p><i class="fas fa-phone"></i> +336 50 72 77 91</p>
+                                <p><i class="fas fa-map-marker-alt"></i> 219 chemin de la chaux saint-medard en forez</p>
+                            </div>
+                        </div>
+
+                        {# Section profil #}
+                        <div class="col-md-8 profile-section">
+                            <h2 class="border-bottom pb-2">Profil</h2>
+                            <p class="text-justify">
+                                Étudiant motivé en première année de BUT Réseaux et Télécommunications, 
+                                passionné par les nouvelles technologies et le développement web. 
+                                Je recherche une alternance/un stage pour mettre en pratique mes compétences 
+                                et développer mon expertise dans le domaine des réseaux.
+                            </p>
+                        </div>
+                    </div>
+
+                    {# Les autres sections restent identiques structurellement mais héritent des nouveaux styles #}
+                    {# Section Formation #}
+                    <div class="mb-4">
+                        <h2 class="border-bottom pb-2">Formation</h2>
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                                <strong>2024 - En cours</strong>
+                            </div>
+                            <div class="col-md-8">
+                                <strong>BUT Réseaux et Télécommunications</strong><br>
+                                IUT de Roanne<br>
+                                <em>Spécialisation en administration des réseaux et sécurité</em>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                                <strong>2020 - 2024</strong>
+                            </div>
+                            <div class="col-md-8">
+                                <strong>Baccalauréat STI2D</strong><br>
+                                Lycée de Mauriac<br>
+                                <em>Option SIN (Systèmes d'Information et Numérique)</em>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Section Expérience Professionnelle #}
+{# Section Compétences #}
+                    <div class="mb-4 competences">
+                        <h2 class="border-bottom pb-2">Compétences</h2>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Compétences Techniques</h4>
+                                <ul>
+                                    <li>Notions en administration réseau</li>
+                                    <li>Configuration basique de routeurs et switches Cisco</li>
+                                    <li>Initiation à la sécurité des réseaux</li>
+                                    <li>Développement web débutant (HTML, CSS)</li>
+                                    <li>Découverte du Framework Symfony</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Compétences Personnelles</h4>
+                                <ul>
+                                    <li>Esprit d'équipe</li>
+                                    <li>Curieux et motivé</li>
+                                    <li>Capacité d'apprentissage</li>
+                                    <li>Ponctuel et organisé</li>
+                                    <li>Sens du relationnel (expérience en restauration)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {# Section Compétences #}
+                    <div class="mb-4 competences">
+                        <h2 class="border-bottom pb-2">Compétences</h2>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Compétences Techniques</h4>
+                                <ul>
+                                    <li>Administration réseau</li>
+                                    <li>Configuration de routeurs et switches</li>
+                                    <li>Sécurité des réseaux</li>
+                                    <li>Développement web (HTML, CSS, PHP)</li>
+                                    <li>Framework Symfony</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Compétences Personnelles</h4>
+                                <ul>
+                                    <li>Travail en équipe</li>
+                                    <li>Gestion du stress</li>
+                                    <li>Capacité d'adaptation</li>
+                                    <li>Sens de l'organisation</li>
+                                    <li>Communication client</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Section Langues #}
+                    <div class="mb-4 langues">
+                        <h2 class="border-bottom pb-2">Langues</h2>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Français : Langue maternelle</li>
+                                    <li>Anglais : Niveau intermédiaire</li>
+                                    <li>Espagnol : Notions</li>
+                                    <li>Tahitien : Notions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
