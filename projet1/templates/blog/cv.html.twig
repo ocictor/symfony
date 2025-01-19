@@ -118,12 +118,14 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 15px;
+            width: 100%;
         }
 
         .download-cv-btn:hover {
             background-color: #2980b9;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: white;
         }
     </style>
 {% endblock %}
@@ -147,7 +149,7 @@
                                 <p><i class="fas fa-phone"></i> +336 50 72 77 91</p>
                                 <p><i class="fas fa-map-marker-alt"></i> 219 chemin de la chaux saint-medard en forez</p>
                                 <div class="mt-3">
-                                    <a href="{{ path('download_cv') }}" class="btn btn-primary btn-block download-cv-btn">
+                                    <a href="{{ path('app_formulaire') }}" class="btn btn-primary btn-block download-cv-btn">
                                         <i class="fas fa-download"></i> Télécharger le CV
                                     </a>
                                 </div>

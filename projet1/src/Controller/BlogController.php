@@ -14,7 +14,7 @@ class BlogController extends AbstractController
         return $this->render('blog/index.html.twig', [
             'name' => 'CELARIER Victor',
             'group' => 'A2',
-            'introduction' => 'Étudiant  en Réseaux et Télécommunications avec un fort intérêt pour la cybersécurité et les intelligences artificielles'
+            'introduction' => 'Étudiant passionné en Réseaux et Télécommunications avec un fort intérêt pour la cybersécurité et l\'infrastructure cloud.'
         ]);
     }
 
@@ -27,6 +27,23 @@ class BlogController extends AbstractController
                 'Architecture Réseau',
                 'Informatique en Cloud',
                 'Contribution Open Source'
+            ],
+            'personal_interests' => [
+                'basketball' => [
+                    'icon' => 'basketball-ball',
+                    'title' => 'Basketball',
+                    'description' => 'Passionné de basketball, ce sport me permet de développer mon esprit d\'équipe et mon sens de la stratégie.'
+                ],
+                'communication' => [
+                    'icon' => 'users',
+                    'title' => 'Relations Humaines',
+                    'description' => 'Mon expérience dans la restauration m\'a permis de développer d\'excellentes compétences en communication.'
+                ],
+                'travel' => [
+                    'icon' => 'plane',
+                    'title' => 'Voyages',
+                    'description' => 'Les voyages sont pour moi une source d\'enrichissement personnel et culturel.'
+                ]
             ]
         ]);
     }
@@ -57,15 +74,37 @@ class BlogController extends AbstractController
         ]);
     }
 
+    #[Route('/formulaire', name: 'app_formulaire')]
+    public function formulaire(): Response
+    {
+        return $this->render('blog/formulaire.html.twig');
+    }
+
     #[Route('/portfolio', name: 'app_portfolio')]
     public function portfolio(): Response
     {
         return $this->render('blog/portfolio.html.twig', [
-            'projects' => [
-                [
-                    'title' => 'Implémentation Sécurité Réseau',
-                    'description' => 'Mise en place d\'une infrastructure réseau sécurisée',
-                    'skills' => ['Sécurité', 'Réseaux', 'Documentation']
+            'categories' => [
+                'programmer' => [
+                    'icon' => 'fa-code',
+                    'competences' => [
+                        'AC1' => ['titre' => 'Développement Web', 'niveau' => 3],
+                        'AC2' => ['titre' => 'Scripts d\'automatisation', 'niveau' => 2]
+                    ]
+                ],
+                'administrer' => [
+                    'icon' => 'fa-server',
+                    'competences' => [
+                        'AC3' => ['titre' => 'Administration Système', 'niveau' => 3],
+                        'AC4' => ['titre' => 'Sécurité', 'niveau' => 2]
+                    ]
+                ],
+                'connecter' => [
+                    'icon' => 'fa-network-wired',
+                    'competences' => [
+                        'AC5' => ['titre' => 'Infrastructure Réseau', 'niveau' => 3],
+                        'AC6' => ['titre' => 'Services Réseau', 'niveau' => 2]
+                    ]
                 ]
             ]
         ]);

@@ -12,45 +12,58 @@
                 </div>
             </div>
 
-            <div class="row">
-                {% for hobby in hobbies %}
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="card-title">{{ hobby }}</h3>
-                                <p class="card-text">
-                                    Description détaillée de mon intérêt pour {{ hobby }} et comment 
-                                    cela contribue à mon développement professionnel.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
+            {# Intérêt Principal #}
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>Centre d'intérêt</h2>
+                </div>
+                <div class="card-body">
+                    <h4><i class="fas fa-shield-alt mr-2"></i>Cybersécurité</h4>
+                    <p>Passionné par la sécurité informatique, j'aimerais apprends à protéger les systèmes et à comprendre les différentes menaces. .</p>
+                </div>
             </div>
 
-            <div class="card mt-4">
+            {# Passions Personnelles #}
+            <div class="card">
                 <div class="card-header bg-primary text-white">
-                    <h2>Projets personnels</h2>
+                    <h2>Passions Personnelles</h2>
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6 mb-4">
+                        <div class="col-md-4 mb-4">
                             <div class="card h-100">
-                                <img src="{{ asset('images/reseau.jpg') }}" class="card-img-top" alt="Image réseau">
                                 <div class="card-body">
-                                    <h5 class="card-title">Administration Réseau</h5>
-                                    <p class="card-text">Configuration et maintien de réseaux informatiques, 
-                                    avec une attention particulière pour la sécurité et la performance.</p>
+                                    <h5 class="card-title"><i class="fas fa-basketball-ball mr-2"></i> Basketball</h5>
+                                    <p class="card-text">
+                                        Passionné de basketball, ce sport me permet de développer mon esprit d'équipe 
+                                        et mon sens de la stratégie. C'est aussi un excellent moyen de me maintenir 
+                                        en forme et de décompresser.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
+                        <div class="col-md-4 mb-4">
                             <div class="card h-100">
-                                <img src="{{ asset('images/dev.jpg') }}" class="card-img-top" alt="Image développement">
                                 <div class="card-body">
-                                    <h5 class="card-title">Développement Web</h5>
-                                    <p class="card-text">Création de sites web modernes utilisant les dernières 
-                                    technologies comme Symfony et Bootstrap.</p>
+                                    <h5 class="card-title"><i class="fas fa-users mr-2"></i> Relations Humaines</h5>
+                                    <p class="card-text">
+                                        Mon expérience dans la restauration m'a permis de développer d'excellentes 
+                                        compétences en communication. J'apprécie particulièrement les interactions 
+                                        avec les clients et le travail en équipe, ce qui m'aide à développer mes 
+                                        compétences relationnelles.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-plane mr-2"></i> Voyages</h5>
+                                    <p class="card-text">
+                                        Les voyages sont pour moi une source d'enrichissement personnel et culturel. 
+                                        J'aime découvrir de nouveaux endroits, rencontrer différentes personnes et 
+                                        m'immerger dans diverses cultures.
+                                    </p>
                                 </div>
                             </div>
                         </div>
