@@ -14,7 +14,7 @@ class BlogController extends AbstractController
         return $this->render('blog/index.html.twig', [
             'name' => 'CELARIER Victor',
             'group' => 'A2',
-            'introduction' => 'Étudiant passionné en Réseaux et Télécommunications avec un fort intérêt pour la cybersécurité et l\'infrastructure cloud.'
+            'introduction' => 'Étudiant  en Réseaux et Télécommunications avec un fort intérêt pour la cybersécurité et les intelligences artificielles'
         ]);
     }
 
@@ -69,5 +69,17 @@ class BlogController extends AbstractController
                 ]
             ]
         ]);
+    }
+
+    #[Route('/download-cv', name: 'download_cv')]
+    public function downloadCV(): Response
+    {
+        $filePath = $this->getParameter('kernel.project_dir') . '/public/downloads/cv.pdf';
+        
+        if (!file_exists($filePath)) {
+            throw $this->createNotFoundException('Le CV n\'existe pas.');
+        }
+
+        return $this->file($filePath, 'cv-celarier-victor.pdf');
     }
 }
